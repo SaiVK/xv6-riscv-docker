@@ -19,38 +19,37 @@ __Step 1:__ Clone _xv6-riscv_ repo into your host system.
 git clone https://github.com/mit-pdos/xv6-riscv
 ```
 
-__Step 2__: Running _xv6-riscv_ inside docker
+__Step 2__: Executing _xv6-riscv_ inside docker.
 On host system:
 ```
 docker run -it -v <path to xv6-riscv in your host system>:/home/os-iitm/xv6-riscv svkv/riscv-tools:v1.0
 ```
-Inside docker container
+Inside docker container:
 ```
 cd xv6-riscv && make qemu
 ```
 The -v flag enables shared volumes between host system and docker container. The _xv6-riscv_ cloned repo resides on the host system and is shared with the docker container. 
 
 ## Debugging  _xv6-riscv_ with _gdb_
-On host system
+Run the following commands.
+On host system:
 ```
 docker run -it -v <path to xv6-riscv in your host system>:/home/os-iitm/xv6-riscv svkv/riscv-tools:v1.0
 ```
-Inside docker container
+Inside docker container:
 ```
 cd xv6-riscv && make qemu-gdb
 ```
-Note the tcp port id in the last output line
 
-On host system in another terminal tab
+On host system in another terminal tab:
 ```
 docker ps
 ```
-Note the container id for svkv/riscv-tools:v1.0 container
-On host system:
+Note the container id for _svkv/riscv-tools:v1.0_ container on host system:
 ```
 docker exec -it <container-id> bash
 ```
-Inside the replica docker container created
+Inside the replica docker container created:
 ```
 riscv64-unknown-elf-gdb xv6-riscv/kernel/kernel
 ```

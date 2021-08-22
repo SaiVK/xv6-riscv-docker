@@ -19,12 +19,12 @@ __Step 1:__ Clone _xv6-riscv_ repo into your host system.
 git clone https://github.com/mit-pdos/xv6-riscv
 ```
 
-__Step 2__: Executing _xv6-riscv_ inside docker.
-On host system:
+__Step 2__: Executing _xv6-riscv_ inside docker.<br/>
+Execute the following command on host system. You will get a shell within the docker container. 
 ```
 docker run -it -v <path to xv6-riscv in your host system>:/home/os-iitm/xv6-riscv svkv/riscv-tools:v1.0
 ```
-Inside docker container:
+Inside docker container shell, execute the following command to get started with _xv6-riscv_:
 ```
 cd xv6-riscv && make qemu
 ```

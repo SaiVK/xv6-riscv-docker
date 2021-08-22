@@ -20,7 +20,7 @@ git clone https://github.com/mit-pdos/xv6-riscv
 ```
 
 __Step 2__: Executing _xv6-riscv_ inside docker.<br/>
-Execute the following command on host system. You will get a shell within the docker container. 
+Execute the following command on host system. You will get a shell within the docker container. Note: Add the path to _xv6-riscv_ repo that you have cloned after the _-v_ flag.
 ```
 docker run -it -v <path to xv6-riscv in your host system>:/home/os-iitm/xv6-riscv svkv/riscv-tools:v1.0
 ```

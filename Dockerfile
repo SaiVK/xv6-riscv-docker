@@ -3,7 +3,7 @@ RUN apt-get -y update && apt-get install -y tzdata && apt-get install -y git cur
       autotools-dev libmpc-dev libmpfr-dev libgmp-dev libusb-1.0-0-dev \
       gawk build-essential bison flex texinfo gperf libtool patchutils \
       bc zlib1g-dev device-tree-compiler pkg-config libexpat-dev \
-      libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev git python \
+      libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev git python3 \
       && rm -rf /var/lib/apt/lists/*
 WORKDIR /home/os-iitm
 # Installing RiscV Toolchain
@@ -25,7 +25,7 @@ RUN apt-get -y update && apt-get install -y tzdata && apt-get install  -y curl m
       autotools-dev libmpc-dev libmpfr-dev libgmp-dev libusb-1.0-0-dev \
       gawk build-essential bison flex texinfo gperf libtool patchutils \
       bc zlib1g-dev device-tree-compiler pkg-config libexpat-dev cmake \
-      libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev git python \
+      libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev git python3 \
       && rm -rf /var/lib/apt/lists/*
 COPY --from=builder1 /home/os-iitm/install /home/os-iitm/install
 RUN git clone https://github.com/riscv/riscv-isa-sim.git
@@ -57,7 +57,7 @@ RUN apt-get -y update && apt-get install -y tzdata && apt-get install -y autocon
       autotools-dev libmpc-dev libmpfr-dev libgmp-dev \
       gawk build-essential bison flex texinfo gperf libtool patchutils \
       bc zlib1g-dev device-tree-compiler pkg-config libexpat-dev cmake \
-      libglib2.0-dev libfdt-dev zlib1g-dev git python \
+      libglib2.0-dev libfdt-dev zlib1g-dev git python3 \
       libpixman-1-dev libusb-1.0-0-dev \
       && rm -rf /var/lib/apt/lists/*
 COPY --from=builder2 /home/os-iitm/install /home/os-iitm/install

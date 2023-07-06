@@ -43,7 +43,7 @@ ENV QEMU /home/os-iitm/install/qemu
 ENV PATH "$QEMU/bin:${PATH}"
 RUN git clone https://github.com/qemu/qemu
 WORKDIR qemu
-RUN git checkout v4.0.0
+RUN git checkout v8.0.2
 RUN ./configure --target-list=riscv64-softmmu --prefix=$QEMU --disable-werror && make -j4 && make install
 
 # Final image
